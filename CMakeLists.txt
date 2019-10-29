@@ -1,0 +1,6 @@
+add_subdirectory(dp)
+SET(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -ggdb -fsanitize=address")
+add_executable(leetcode_163_missing_ranges leetcode_163_missing_ranges.c)
+add_executable(leetcode_5_Longest_Palindromic_Substring leetcode_5_Longest_Palindromic_Substring.c)
+add_executable(leetcode_3_longest_substring_without_repeating_char leetcode_3_longest_substring_without_repeating_char.c)
