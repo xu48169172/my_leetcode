@@ -2,6 +2,7 @@
 #include <stdlib.h>
 // 超时 
 // 解题思路： 两层循环，计算 或操作，通过一个数组统计 加入的数字是否重复，qosrt 排序，加上二分查找。
+// 标签 位运算 动态规划
 int binary_search(int *out, int key, int num)
 {
     int left = 0;
