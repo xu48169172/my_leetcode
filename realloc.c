@@ -1,3 +1,39 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+#include <stdio.h>
+#include <stdlib.h>
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+ };
+int* boundaryOfBinaryTree(struct TreeNode* root, int* returnSize)
+{
+    
+}
+
+int main()
+{
+    struct TreeNode* root = NULL;
+    int returnSize = 0;
+    int *out = boundaryOfBinaryTree(root, &returnSize);
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", out[i]);
+    }
+    printf("\n");
+}
+
 #if 0
 [开心IT面试题] realloc用法
 
