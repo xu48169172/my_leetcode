@@ -85,7 +85,7 @@ int pop(struct stack *p)
 int main()
 {
     struct stack *p = calloc(1, sizeof(struct stack));
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 30; i++) {
         push(p, i);
     }
     while(!is_stack_empty(p)) {
@@ -94,7 +94,7 @@ int main()
     printf("\n");
 
     struct queue *q = calloc(1, sizeof(struct queue));
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 30; i++) {
         enqueue(q, i);
     }
     while(!is_queue_empty(q)) {
