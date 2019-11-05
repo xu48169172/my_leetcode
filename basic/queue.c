@@ -13,9 +13,19 @@ struct queue {
     int size;
     int capacity;
 };
+void queue_debug(struct queue *q)
+{
+    printf("==========\n");
+    for (int i = 0; i < q->capacity; i++) {
+        printf("%d ", q->data[i].data);
+    }
+    printf("\nhead:%d, tail:%d, size:%d, capacity:%d\n", q->head, q->tail, q->size, q->capacity);
+    printf("\n");
+}
 void enqueue(struct queue *q, struct Data val)
 {
     if (q->capacity == q->size) {
+        queue_debug(q);
         struct Data *old = q->data;
         q->capacity = q->capacity + q->capacity;
         q->data = malloc(q->capacity * sizeof(struct Data));
@@ -23,8 +33,8 @@ void enqueue(struct queue *q, struct Data val)
         memcpy(q->data, old, q->size * sizeof(struct Data));
         free(old);
         printf("queue full extend it\n");
+        queue_debug(q);
     }
-    q->tail = q->tail % q->capacity;
     q->data[q->tail] = val;
     q->tail++;
     q->size++;
@@ -32,16 +42,14 @@ void enqueue(struct queue *q, struct Data val)
 
 int is_queue_empty(struct queue *q)
 {
-    return q->size == 0;
+    return q->head == q->tail;
 }
 static struct Data zero;
 struct Data dequeue(struct queue *q)
 {
-    q->head = q->head % q->capacity;
     struct Data temp = q->data[q->head];
     q->data[q->head] = zero;
     q->head++;
-    q->size--;
     return temp;
 }
 struct queue * make_queue(int capacity)
@@ -55,22 +63,21 @@ struct queue * make_queue(int capacity)
 }
 int main()
 {
-
     struct queue *q = make_queue(5);
     for (int i = 0; i < 10; i++) {
         struct Data temp;
         temp.data = i;
         enqueue(q, temp);
     }
-#if 0
     dequeue(q);
     dequeue(q);
+    queue_debug(q);
     for (int i = 5; i < 10; i++) {
         struct Data temp;
         temp.data = i;
         enqueue(q, temp);
     }
-#endif
+    queue_debug(q);
     while(!is_queue_empty(q)) {
         struct Data temp = dequeue(q);
         printf("%d ",temp.data);
