@@ -40,5 +40,4 @@ int main()
     printf("\n");
     printf("find result:%d\n",binary_search(a, 10, sizeof(a)/sizeof(a[0])));
     printf("find result:%d\n",binary_search(a, 9, sizeof(a)/sizeof(a[0])));
-
 }
