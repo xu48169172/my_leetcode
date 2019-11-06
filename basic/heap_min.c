@@ -19,7 +19,7 @@ void min_heap(int *p, int i)
         tmp = p[i];
         p[i] = p[min];
         p[min] = tmp;
-        min_heap(p, min, data);
+        min_heap(p, min);
     }
 }
 // 向下保持
