@@ -1,1 +1,0 @@
-/usr/bin/gcc-7 -g  -rdynamic CMakeFiles/word_maze.dir/word_maze.o  -o word_maze 

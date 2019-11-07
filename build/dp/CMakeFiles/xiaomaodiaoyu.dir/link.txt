@@ -1,1 +1,0 @@
-/usr/bin/gcc-7 -g  -rdynamic CMakeFiles/xiaomaodiaoyu.dir/xiaomaodiaoyu.o  -o xiaomaodiaoyu 

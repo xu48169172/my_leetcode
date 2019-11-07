@@ -1,1 +1,0 @@
-/usr/bin/gcc-7 -g  -rdynamic CMakeFiles/377_NO_HuiWen.dir/377_NO_HuiWen.o  -o 377_NO_HuiWen 

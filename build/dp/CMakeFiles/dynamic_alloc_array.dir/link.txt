@@ -1,1 +1,0 @@
-/usr/bin/gcc-7 -g  -rdynamic CMakeFiles/dynamic_alloc_array.dir/dynamic_alloc_array.o  -o dynamic_alloc_array 

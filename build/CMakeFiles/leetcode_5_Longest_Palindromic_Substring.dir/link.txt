@@ -1,1 +1,0 @@
-/usr/bin/gcc-7  -O0 -ggdb -fsanitize=address -g  -rdynamic CMakeFiles/leetcode_5_Longest_Palindromic_Substring.dir/leetcode_5_Longest_Palindromic_Substring.o  -o leetcode_5_Longest_Palindromic_Substring 

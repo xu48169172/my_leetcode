@@ -1,1 +1,0 @@
-/usr/bin/gcc-7 -g  -rdynamic CMakeFiles/longest_palindrome_array.dir/longest_palindrome_array.o  -o longest_palindrome_array 
