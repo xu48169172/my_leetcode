@@ -18,8 +18,8 @@ int compare(void *p0, void *p1)
 {
     struct Data *a0 = (struct Data *)p0;
     struct Data *a1 = (struct Data *)p1;
-    return a0->data - a1->data; // 最小堆
-    //return a1->data - a0->data; 最大堆
+    //return a0->data - a1->data; // 最小堆
+    return a1->data - a0->data; //最大堆
 }
 void percolate_up(struct heap *h, int index)
 {

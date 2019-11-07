@@ -1,0 +1,1 @@
+/usr/bin/gcc-7 -g  -rdynamic CMakeFiles/heap_min.dir/heap_min.o  -o heap_min 
