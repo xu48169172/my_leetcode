@@ -6,6 +6,7 @@ void erase_all(char *s, char c)
     while (*s != '\0') {
         if (*s == c) {
             strcpy(s, s + 1);
+            s--;
         }
         s++;
     }

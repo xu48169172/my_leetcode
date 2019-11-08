@@ -8,7 +8,15 @@ void *my_malloc(size_t size)
     memset(p, 0, size);
     return p;
 }
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};
+void build_tree()
+{
 
+}
 int main()
 {
     int a[][4] = {{1, 2, 3, 4},{5, 6, 7, 8}};
